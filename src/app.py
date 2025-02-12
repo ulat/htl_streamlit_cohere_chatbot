@@ -3,6 +3,8 @@ import streamlit as st
 import os
 import dotenv
 import uuid
+import sys
+sys.path.append('src')
 
 # check if it's linux so it works on Streamlit Cloud
 # if os.name == 'posix':
@@ -12,7 +14,7 @@ import uuid
 
 from langchain.schema import HumanMessage, AIMessage
 
-from rag_methods import (
+from rag.rag_methods import (
     load_doc_to_db, 
     load_url_to_db,
     stream_llm_response,
@@ -98,7 +100,7 @@ else:
             )
 
         with cols0[1]:
-            st.button("Clear Chat", on_click=lambda: st.session_state.messages.clear(), type="primary")
+            st.button("Clear Chat", on_click=lambda: st.session_state.messages.clear(), type="primary", key="clear_chat")
 
         st.header("RAG Sources:")
             

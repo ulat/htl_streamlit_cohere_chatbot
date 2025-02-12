@@ -1,3 +1,6 @@
 .venv*/
 .env
+.streamlit
+src/.streamlit
 __pycache__
+.pytest_cache

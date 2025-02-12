@@ -55,6 +55,7 @@ humanfriendly==10.0
 idna==3.10
 importlib_metadata==8.4.0
 importlib_resources==6.4.5
+iniconfig==2.0.0
 ipykernel==6.29.5
 ipython==8.27.0
 jedi==0.19.1
@@ -110,6 +111,7 @@ parso==0.8.4
 pexpect==4.9.0
 pillow==10.4.0
 platformdirs==4.3.6
+pluggy==1.5.0
 posthog==3.6.6
 prompt_toolkit==3.0.47
 protobuf==4.25.5
@@ -128,6 +130,7 @@ pypdf==5.0.0
 PyPika==0.48.9
 pyproject_hooks==1.1.0
 pyreadline3==3.5.4
+pytest==8.3.4
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 pytz==2024.2

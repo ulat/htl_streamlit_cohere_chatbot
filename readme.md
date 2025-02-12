@@ -15,5 +15,11 @@ $ venv\Scripts\activate  # or source venv/bin/activate in Linux/Mac
 
 $ pip install -r requirements.txt
 
-$ streamlit run app.py
+$ streamlit run src/app.py
+```
+
+To run the UI-tests locally:
+
+```
+$ pytest src/tests 
 ```
