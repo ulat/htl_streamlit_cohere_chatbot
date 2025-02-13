@@ -1,0 +1,38 @@
+# github action file that runs streamlit ui tests automatically
+
+name: Streamlit RAG app
+
+# run tests on push to main and dev branch
+# run test on pull_request to main branch
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+# setup ubutu container
+# install checkout current repository
+# install python
+# run tests via pytest
+jobs:
+  streamlit:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: streamlit/streamlit-app-action@v0.0.3
+        with:
+          app-path: src/app.py
+          ruff: true #enable automatic linting
+          pytest-args: -v --junit-xml=test-results.xml
+      - if: always()
+        uses: pmeier/pytest-results-action@v0.6.0        
+        with:
+          path: test-results.xml
+          summary: true
+          display-options: fEX
