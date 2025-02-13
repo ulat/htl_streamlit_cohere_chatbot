@@ -19,7 +19,7 @@ permissions:
 # run tests via pytest
 jobs:
   streamlit:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
