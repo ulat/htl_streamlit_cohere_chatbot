@@ -6,9 +6,9 @@ name: Streamlit RAG app
 # run test on pull_request to main branch
 on:
   push:
-    branches: ["main", "dev"]
+    branches: [main, dev]
   pull_request:
-    branches: ["main"]
+    branches: [main]
 
 permissions:
   contents: read
