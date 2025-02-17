@@ -2,5 +2,14 @@
 .env
 .streamlit
 src/.streamlit
+src/__pycache__
+src/.pytest_cache
+src/rag/__pycache__
+src/tests/__pycache__
 __pycache__
 .pytest_cache
+kit-jupyter-slides-theme
+reveal.js
+source_files
+img/kit_logo.jpg
+.gitignore

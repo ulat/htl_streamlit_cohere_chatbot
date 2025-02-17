@@ -57,7 +57,7 @@ def test_enable_use_rag_toggle():
     """After adding a url to the rag-document store, we expect the use_rag toggle to be activated
     and the url added to the list of documents.
     """
-    at = AppTest.from_file(PATH_TO_APP_MAIN_FILE).run()
+    d
     assert at.toggle("use_rag").disabled    
     #assert not at.text_input("rag_url").disabled
     assert at.text_input("rag_url").placeholder == "https://example.com"    
